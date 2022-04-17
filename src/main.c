@@ -13,7 +13,10 @@ void derive(double (*func)(double)) {
     }
 }
 
-double function(double x) { return (pow(x, 3) * 4) + 2; }
+double function(double x) {
+	// f(x) = x^3 * 4 + 2
+	return (pow(x, 3) * 4) + 2;
+}
 
 int main() {
 

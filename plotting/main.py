@@ -7,7 +7,7 @@ x = df["x"]
 y = df["y"]
 yprime = df["y'"]
 
-plt.plot(x, y, color='r', label='y')
+plt.plot(x, y, color='b', label='y')
 plt.plot(x, yprime, color='g', label='yprime')
 plt.show()
 
