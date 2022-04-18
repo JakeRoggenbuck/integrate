@@ -1,25 +1,26 @@
 #include <math.h>
 #include <stdio.h>
-#define SIZE 1000
-#define H 0.001
+#define SIZE 10000
+#define H 0.0002
 
-void derive(double (*func)(double)) {
-    printf("x,y,y'\n");
+void integrate(double (*func)(double)) {
+    printf("x,y,Y\n");
     for (int i = -SIZE; i < SIZE; i++) {
         double x = i * H;
-        double k = (func((double)x + H) - func(x)) / H;
         double y = func(x);
-        printf("%f,%f,%f\n", x, y, k);
+        double Y = x * func(x);
+
+        printf("%f,%f,%f\n", x, y, Y);
     }
 }
 
 double function(double x) {
-	// f(x) = x^3 * 4 + 2
-	return (pow(x, 3) * 4) + 2;
+    // f(x) = x^3 + 4x + 2
+    return (pow(x, 3) + 4 * x) + 2;
 }
 
 int main() {
 
-    derive(function);
+    integrate(function);
     return 0;
 }

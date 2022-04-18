@@ -9,6 +9,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
 
 file(GLOB_RECURSE SOURCES src/*.c)
 
-add_executable(derive ${SOURCES})
-target_link_libraries(derive m)
-target_include_directories(derive PRIVATE src)
+add_executable(integrate ${SOURCES})
+target_link_libraries(integrate m)
+target_include_directories(integrate PRIVATE src)
